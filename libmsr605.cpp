@@ -34,7 +34,7 @@
 #include <iostream>
 #include <signal.h>
 
-#define DEBUG
+//#define DEBUG
 
 using namespace std;
 

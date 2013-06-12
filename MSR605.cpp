@@ -63,6 +63,8 @@ int main (int argc, const char * const argv[]) {
 	if ( argc != 5 ){
 	      license();
 	      printf( "\tusage: %s <track1 bit> <track2 bit> <track3 bit> <mode>\n", argv[0] );
+	      printf( "\t\t <track bit> 5|7|8\n");
+	      printf( "\t\t <mode> 1 = RAW, 2= ISO\n");
 	}else{
 	  int t1 = atoi(argv[1]);
 	  int t2 = atoi(argv[2]);
@@ -105,20 +107,18 @@ int main (int argc, const char * const argv[]) {
 		  switch(mode){
 		    case 1:
 			    data=msr->readCard_raw(t1, t2, t3);
+			    printTrack("Track 1", data->track1, data->t1_len);
+			    printTrack("Track 2", data->track2, data->t2_len);
+			    printTrack("Track 3", data->track3, data->t3_len);
 			    break;
 		    case 2:
 			    data=msr->readCard_iso(t1, t2, t3);
+			    printTrackiso("Track 1", data->track1, data->t1_len);
+			    printTrackiso("Track 2", data->track2, data->t2_len);
+			    printTrackiso("Track 3", data->track3, data->t3_len);
 			    break;
 		  }
-		  //printTrack("Track 1", data->track1, data->t1_len);
-		  //printTrack("Track 2", data->track2, data->t2_len);
-		  //printTrack("Track 3", data->track3, data->t3_len);
-		  
-		  printTrackiso("Track 1", data->track1, data->t1_len);
-		  printTrackiso("Track 2", data->track2, data->t2_len);
-		  printTrackiso("Track 3", data->track3, data->t3_len);
-		
-		  //msr->free_ms_data(data);
+		  msr->free_ms_data(data);
 		}
 				
 		/* close connection */

@@ -3,6 +3,25 @@ MSR605
 
 A C/CPP Library for interacting with the the MSR605 (and other MSR206 compatible) Magstripe Reader/Writers.
 
+Example
+=======
+$ ./msr605 8 8 8 1
+MSR605  Copyright (C) 2013 Pentura 
+This program comes with ABSOLUTELY NO WARRANTY; 
+This is free software, and you are welcome to redistribute it under certain conditions;
+
+Connected to /dev/ttyUSB0
+Firmware: REVU2.31
+Model: 3
+Comm Test Sent...
+Receiving Response.
+Initialized MSR605.
+Waiting for swipe...
+[Track 1]: 
+[Track 2]: d043c1644de7e000
+[Track 3]: 
+
+
 License
 =======
 MSR605 / Libmsr605 by Andy Davies
