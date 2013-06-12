@@ -28,6 +28,8 @@
 
 #define DEVICE "/dev/ttyUSB0"
 
+static const char* VERSION="0.1";
+
 MSR605 *msr = new MSR605();
 
 void sigproc(int x)
@@ -55,7 +57,7 @@ void printTrackiso(const char *msg, unsigned char *buf, unsigned int len)
 }
 
 void license(){
-	printf("MSR605  Copyright (C) 2013 Pentura \nThis program comes with ABSOLUTELY NO WARRANTY; \nThis is free software, and you are welcome to redistribute it under certain conditions;\n\n");
+	printf("MSR605 %s Copyright (C) 2013 Pentura \nThis program comes with ABSOLUTELY NO WARRANTY; \nThis is free software, and you are welcome to redistribute it under certain conditions;\n\n",VERSION);
 }
 
 int main (int argc, const char * const argv[]) {
