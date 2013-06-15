@@ -5,6 +5,7 @@ A C/CPP Library for interacting with the the MSR605 (and other MSR206 compatible
 
 Example
 =======
+<pre>
 $ ./msr605 8 8 8 1
 MSR605  Copyright (C) 2013 Pentura 
 This program comes with ABSOLUTELY NO WARRANTY; 
@@ -17,10 +18,10 @@ Comm Test Sent...
 Receiving Response.
 Initialized MSR605.
 Waiting for swipe...
-[Track 1]: 
-[Track 2]: d043c1644de7e000
-[Track 3]: 
-
+Track 1: 
+Track 2: 1042c16f1de7f000
+Track 3: 
+</pre>
 
 License
 =======
